@@ -25,7 +25,7 @@ html = browser.html
 soup = BeautifulSoup(html, 'html.parser')
 ```
 
-NASA Mars News
+# NASA Mars News
 
 
 Scrape the NASA Mars News Site and collect the latest News Title and Paragraph Text. Assign the text to variables that you can reference later.
@@ -47,7 +47,7 @@ print(news_title,news_p)
 JPL Mars Space Images - Featured Image
 
 
-Visit the url for JPL Featured Space Image here.
+# Visit the url for JPL Featured Space Image here.
 Use splinter to navigate the site and find the image url for the current Featured Mars Image and assign the url string to a variable called featured_image_url.
 Make sure to find the image url to the full size .jpg image.
 Make sure to save a complete url string for this image.
@@ -93,7 +93,7 @@ featured_image_url
 
 
 
-Mars Weather
+# Mars Weather
 
 
 Visit the Mars Weather twitter account here and scrape the latest Mars weather tweet from the page. Save the tweet text for the weather report as a variable called mars_weather.
@@ -127,7 +127,7 @@ mars_weather
 
 
 
-Mars Facts
+# Mars Facts
 
 
 Visit the Mars Facts webpage here and use Pandas to scrape the table containing facts about the planet including Diameter, Mass, etc.
@@ -309,7 +309,7 @@ df
 
 
 
-Mars Hemispheres
+# Mars Hemispheres
 
 
 Visit the USGS Astrogeology site here to obtain high resolution images for each of Mar's hemispheres.
