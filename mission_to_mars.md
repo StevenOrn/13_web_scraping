@@ -72,7 +72,7 @@ soup.find('article', class_='carousel_item')['style']
 
 
 
-    "background-image: url('/spaceimages/images/wallpaper/PIA19141-1920x1200.jpg');"
+    "background-image: url('/spaceimages/images/wallpaper/PIA18897-1920x1200.jpg');"
 
 
 
@@ -89,7 +89,7 @@ featured_image_url
 
 
 
-    'https://www.jpl.nasa.gov/spaceimages/images/wallpaper/PIA19141-1920x1200.jpg'
+    'https://www.jpl.nasa.gov/spaceimages/images/wallpaper/PIA18897-1920x1200.jpg'
 
 
 
@@ -229,83 +229,13 @@ tables[0]
 ```python
 df = tables[0]
 df.columns = ['Fact','Measurements']
-df
+df.to_html(index=False)
 ```
 
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Fact</th>
-      <th>Measurements</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Equatorial Diameter:</td>
-      <td>6,792 km</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Polar Diameter:</td>
-      <td>6,752 km</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Mass:</td>
-      <td>6.42 x 10^23 kg (10.7% Earth)</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Moons:</td>
-      <td>2 (Phobos &amp; Deimos)</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Orbit Distance:</td>
-      <td>227,943,824 km (1.52 AU)</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Orbit Period:</td>
-      <td>687 days (1.9 years)</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Surface Temperature:</td>
-      <td>-153 to 20 °C</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>First Record:</td>
-      <td>2nd millennium BC</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Recorded By:</td>
-      <td>Egyptian astronomers</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+    '<table border="1" class="dataframe">\n  <thead>\n    <tr style="text-align: right;">\n      <th>Fact</th>\n      <th>Measurements</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Equatorial Diameter:</td>\n      <td>6,792 km</td>\n    </tr>\n    <tr>\n      <td>Polar Diameter:</td>\n      <td>6,752 km</td>\n    </tr>\n    <tr>\n      <td>Mass:</td>\n      <td>6.42 x 10^23 kg (10.7% Earth)</td>\n    </tr>\n    <tr>\n      <td>Moons:</td>\n      <td>2 (Phobos &amp; Deimos)</td>\n    </tr>\n    <tr>\n      <td>Orbit Distance:</td>\n      <td>227,943,824 km (1.52 AU)</td>\n    </tr>\n    <tr>\n      <td>Orbit Period:</td>\n      <td>687 days (1.9 years)</td>\n    </tr>\n    <tr>\n      <td>Surface Temperature:</td>\n      <td>-153 to 20 °C</td>\n    </tr>\n    <tr>\n      <td>First Record:</td>\n      <td>2nd millennium BC</td>\n    </tr>\n    <tr>\n      <td>Recorded By:</td>\n      <td>Egyptian astronomers</td>\n    </tr>\n  </tbody>\n</table>'
 
 
 
@@ -364,7 +294,7 @@ web_list[-3]
 
 
 
-    <li><a href="http://astropedia.astrogeology.usgs.gov/download/Mars/Viking/schiaparelli_enhanced.tif" target="_blank">Original</a> (tif<span class="tooltip word-tif" title=""></span>) 35 MB</li>
+    <li><a href="http://astrogeology.usgs.gov/tools/map-a-planet-2">Map a Planet 2</a></li>
 
 
 
@@ -375,9 +305,6 @@ for obj in web_list:
         print(obj.a['href'])
 ```
 
-    http://astropedia.astrogeology.usgs.gov/download/Mars/Viking/schiaparelli_enhanced.tif
-
-
 
 ```python
 soup.find('title').text.split('|')[0][:-1]
@@ -386,7 +313,7 @@ soup.find('title').text.split('|')[0][:-1]
 
 
 
-    'Schiaparelli Hemisphere Enhanced'
+    'Astropedia Search Results'
 
 
 
